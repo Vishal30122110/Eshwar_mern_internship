@@ -1,0 +1,25 @@
+
+.app2
+{   
+    background-color: green;
+}
+.app2 h1{
+    color: white;
+}
+.app2 h2{
+    color: black;
+}
+.app3
+{
+    background-color: green;
+}
+.app3 h1{
+    color: white;
+}
+.app3 h2{
+    color: black;
+}
+.mystyle p
+{   text-align: center;
+    color: black;
+}
