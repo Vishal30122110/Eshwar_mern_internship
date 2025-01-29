@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var arr = [];
+        var size = parseInt(prompt("Enter the size of the array: "), 10);
+        for (let i = 0; i < size; i++) {
+            arr[i] = parseInt(prompt("Enter the value: "), 10);
+        }
+
+        var filter1 = [];
+        var filterevenprime = [];
+
+        for (let i = 0; i < size; i++) {
+            let currentValue = arr[i];
+            if (currentValue === 2) {
+                filterevenprime.push(currentValue);
+            } else {
+                let sum = 0;
+                for (let j = 1; j < currentValue; j++) {
+                    if (currentValue % j === 0) {
+                        sum += j;
+                    }
+                }
+                if (sum === currentValue) {
+                    filter1.push(currentValue);
+                }
+            }
+        }
+        alert("Given array: " + arr);
+        if (filterevenprime.length === 0) {
+            alert("no even prime")
+        } else {
+            alert("even prime:" + filterevenprime)
+        }
+        if (filter1.length === 0) {
+            alert("no perfect numbers  ")
+        } else {
+            alert("perfect numbers : " + filter1);
+        }
+    </script>
+</body>
+
+</html>
