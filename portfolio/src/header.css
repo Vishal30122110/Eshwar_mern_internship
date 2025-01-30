@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* App Container */
+.App {
+    text-align: center;
+    background-color: #f8f9fa; /* Light neutral background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1.5s ease-out;
+}
+
+/* Navigation Links */
+nav .h1,
+nav .a1,
+nav .p1,
+nav .s1,
+nav .c1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .h1:hover,
+nav .a1:hover,
+nav .p1:hover,
+nav .s1:hover,
+nav .c1:hover {
+    color: #3498db;
+    transform: translateY(-5px);
+}
+
+/* Active Link Styling */
+nav .active {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Page Content Section */
+.page-content {
+    animation: fadeInText 1s ease-in;
+    flex: 1;
+    padding: 40px;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

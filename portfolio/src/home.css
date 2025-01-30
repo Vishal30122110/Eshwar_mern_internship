@@ -1,0 +1,88 @@
+/* Main container styles */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e7f5b, #202c4a);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Profile section styles */
+.profile-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on profile section */
+.profile-section:hover {
+  transform: scale(1.05);
+}
+
+/* Profile image container */
+.profile-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image-container:hover {
+  transform: rotate(15deg);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect on profile image */
+.profile-image-container:hover .profile-img {
+  opacity: 0.8;
+}
+
+/* Name styles */
+.profile-name {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on name */
+.profile-section:hover .profile-name {
+  color: #ff5722;
+}
+
+/* Profile details styles */
+.profile-details {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.profile-details strong {
+  color: #222;
+}
+
+/* Animation for the fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
