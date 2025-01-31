@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        let personA = new Promise((resolve, reject) => {
+            let reached = true
+            if (reached)
+                setTimeout(resolve, 5000, "A reached")
+            else
+                reject("A did not reach")
+        })
+
+        let personB = new Promise((resolve, reject) => {
+            let reached = true
+            if (reached)
+                setTimeout(resolve, 2000, "B reached")
+            else
+                reject("B did not reach")
+        })
+
+        let personC = new Promise((resolve, reject) => {
+            let reached = false
+            if (reached)
+                setTimeout(resolve, 1000, "c reached")
+            else
+                reject("c did not reach")
+        })
+        Promise.race([personA, personB, personC])
+            .then((message) => console.log(message))
+            .catch((message) => console.log(message))
+    </script>
+</body>
+
+</html>
